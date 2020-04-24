@@ -1,0 +1,11 @@
+<section *ngIf="hero">
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div role="row"><span role="contentinfo">id: </span>{{ hero.id }}</div>
+  <div>
+    <label>name:
+      <input placeholder="name" [(ngModel)]="hero.name" aria-label="name">
+    </label>
+  </div>
+</section>
+<button (click)="goBack()">Back</button>
+<button (click)="save()">Save</button>

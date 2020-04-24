@@ -1,0 +1,16 @@
+<header>My Heroes</header>
+<div>
+  <label>Add a Hero name:
+    <input #heroName placeholder="Name" aria-label="Name"/>
+  </label>
+  <button (click)="add(heroName.value); heroName.value=''">Add</button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge" aria-hidden="true">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button class="delete" title="delete hero" (click)="delete(hero)">X</button>
+  </li>
+</ul>
