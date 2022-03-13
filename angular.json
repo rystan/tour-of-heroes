@@ -94,15 +94,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },
@@ -123,6 +119,7 @@
   },
   "defaultProject": "tour-of-heroes",
   "cli": {
-    "analytics": "040b0727-2651-40fa-9167-266ba498651b"
+    "analytics": "040b0727-2651-40fa-9167-266ba498651b",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
