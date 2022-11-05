@@ -117,9 +117,10 @@
       }
     }
   },
-  "defaultProject": "tour-of-heroes",
   "cli": {
     "analytics": "040b0727-2651-40fa-9167-266ba498651b",
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
